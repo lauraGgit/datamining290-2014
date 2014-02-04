@@ -1,5 +1,5 @@
 What are the types of data available to you?
-I'm using the Twitter API (called through python) on recent tweets that contain the term "affordable care act"  it looks like there is mainly .json data available to me about user status
+I'm using the Twitter API (called through python) on recent tweets that contain the term "affordable care act"  it looks like there is mainly .json data available to me about user status. See the dm.csv file for my results.
 
 For data sets: how many records are in the data set? Using API, see below
 
