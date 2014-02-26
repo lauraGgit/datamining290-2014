@@ -4,5 +4,7 @@ venv/
 *.pyc
 *.csv
 *.json
+**/itpas2.txt
+*.tar
 #*
 /server/shorten.db
