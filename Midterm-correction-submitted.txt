@@ -1,0 +1,58 @@
+5. What does ETL stand for?
+Extract, Transform, Load
+
+According to the book, Extraction/transformation/loading tools are data preprocessing tools that allow a user to specify data and perform basic transformations from a graphical user interface. (Han, Kamber & Pai 2012) 
+
+
+
+7.4 Pivot 
+
+
+A pivot operation is a visual operation that rotates the data axes to provide a different view of the data. (Han, Kamber & Pai 2012) In other words, we are swaping the two axes of an output table of a query. In example provided, we at first query to see what ads are be displaying by page, and then we may want to run another query that pivots our results. In this we would display what pages a certain ad occurrs on.
+
+Example:
+____|Home Page| Search Page|
+	|Banner 1 | Banner 2
+	|Box 2 	  | Footer 3
+
+Pivoted
+____|Banner 1 | Banner 2 | Box 2
+	|Home     | Search   | Home page
+
+
+
+10. What is information gain and how is it used to build decision trees?
+
+Information gain the comparison in the amount of homogeneity in a set of classes before and after a partition. This measure is helpful in developing decision trees, because if info gain becomes high after a certain partition, we know that it is not the best choice. Therefore, we want to choose a parition that has the greatest parition gain.
+_____
+Additional information from the book...
+
+Information Gain is an attribute selection measure which measures the difference between the entropy of a given tuple and the amount of expected information still needing to classify the tuple.  Therefore, the gain is the amount is how much would be gained by a spilting an internal node into a given branch. 
+
+Gain(a) = Info(D) - InfoA(D)
+
+Where Info(D) = - Sum (plog2(p) for for p in classes) and 
+
+InfoA(D) = sum(weight_of_the_jth_partition * Info(Dj))
+
+In developing a decision tree, we want to partition the attribute on that maximizes the gain so that we will have the least amount of spilting remaining. Thus, we want to find a spilt that best reduces impurities and partitions into homegenous classes.
+
+14. Draw a dendrogram showing clustering of these points
+l=0 	A     B     D     C     E
+l=1	    |     |_____|     |     |
+l=2	    |        |        |_____|
+l=3     |________|           |
+l=4			|________________|
+					 |
+
+15 Write Map Reduce inputs outputs
+
+mapper: 
+	for i in biz_category:
+		map: none, record =>  category , avg*num_reviews
+reduce: category => category, mean([avg*num_reviews])
+
+In the first mapper, we pull from each record the list of business categories and calculate and intermediate variable that is the approximate total number of stars (average number of stars * number of reviews) for each catergory. In the reducer, we reduce the rating for each category and take the mean total stars which produces the average stars per category.
+
+
+
