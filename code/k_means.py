@@ -2,9 +2,21 @@
 # Implement simple k-means clustering using 1 dimensional data
 #
 ##/
+import random
+import math
 
-dataset = [-13.65089255716321, -0.5409562932238607, -88.4726466247223, 39.30158828358612, 4.066458182574449, 64.64143300482378, 38.68269424751338, 33.42013676314311, 31.18603331719732, -0.2027616409406292, 45.13590038987272, 30.791899783552395, 61.1727490302448, 18.167220741624856, 88.88077709786394, -1.3808002119514704, 50.14991362212521, 55.92029956281276, -6.759813255299466, 34.28290084421072]
-k = 2 # number of clusters
+dataset = [
+    -13.65089255716321, -0.5409562932238607, -88.4726466247223,
+    39.30158828358612, 4.066458182574449, 64.64143300482378,
+    38.68269424751338, 33.42013676314311, 31.18603331719732,
+    -0.2027616409406292, 45.13590038987272, 30.791899783552395,
+    61.1727490302448, 18.167220741624856, 88.88077709786394,
+    -1.3808002119514704, 50.14991362212521, 55.92029956281276,
+    -6.759813255299466, 34.28290084421072
+]
+
+k = 2  # number of clusters
+
 
 ###
 # Helper functions
@@ -15,22 +27,30 @@ def pick_centroids(xs, num):
     """Return list of num centroids given a list of numbers in xs"""
     ###
     # TODO select and return centroids
-    return [1,2]
+    cen = []
+    for e in range(num):
+        r = math.floor(random.random()*len(xs))
+        cen.append(xs[int(r)])
+    return cen
     ##/
+
 
 def distance(a, b):
     """Return the distance of numbers a and b"""
     ###
     # TODO return correct expression
-    return 0
+    return abs(a-b)
     ##/
+
 
 def centroid(xs):
     """Return the centroid number given a list of numbers, xs"""
     ###
     # TODO calculate and return centroid
-    return 0
+    mean = sum(xs)/(len(xs))
+    return mean
     ##/
+
 
 def cluster(xs, centroids):
     """Return a list of clusters centered around the given centroids.  Clusters
@@ -40,12 +60,14 @@ def cluster(xs, centroids):
 
     for x in xs:
         # find the closest cluster to x
-        dist, cluster_id = min((distance(x, c), cluster_id)
-                for cluster_id, c in enumerate(centroids))
+        dist, cluster_id = min(
+            (distance(x, c), cluster_id) for cluster_id, c in enumerate(centroids)
+        )
         # place x in cluster
         clusters[cluster_id].append(x)
 
     return clusters
+
 
 def iterate_centroids(xs, centroids):
     """Return stable centroids given a dataset and initial centroids"""
@@ -77,5 +99,3 @@ final_centroids, final_clusters = iterate_centroids(dataset, initial_centroids)
 for centroid, cluster in zip(final_centroids, final_clusters):
     print "Centroid: %s" % centroid
     print "Cluster contents: %r" % cluster
-
-

@@ -2,7 +2,7 @@ venv/
 *~
 *.sw[po]
 *.pyc
-*.csv
+.csv
 *.json
 #*
 /server/shorten.db
