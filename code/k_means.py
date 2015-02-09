@@ -2,8 +2,6 @@
 # Implement simple k-means clustering using 1 dimensional data
 #
 ##/
-import random
-import math
 
 dataset = [
     -13.65089255716321, -0.5409562932238607, -88.4726466247223,
@@ -27,11 +25,7 @@ def pick_centroids(xs, num):
     """Return list of num centroids given a list of numbers in xs"""
     ###
     # TODO select and return centroids
-    cen = []
-    for e in range(num):
-        r = math.floor(random.random()*len(xs))
-        cen.append(xs[int(r)])
-    return cen
+    return [1, 2]
     ##/
 
 
@@ -39,7 +33,7 @@ def distance(a, b):
     """Return the distance of numbers a and b"""
     ###
     # TODO return correct expression
-    return abs(a-b)
+    return 0
     ##/
 
 
@@ -47,8 +41,7 @@ def centroid(xs):
     """Return the centroid number given a list of numbers, xs"""
     ###
     # TODO calculate and return centroid
-    mean = sum(xs)/(len(xs))
-    return mean
+    return 0
     ##/
 
 
