@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style type="text/css">
+/* Normalize */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, figure, form, fieldset, input, p, blockquote, th, td, legend {
+	margin: 0;
+	padding: 0;
+}
+body {
+    font-family: 'Cardo', serif;
+}
+h1 {
+    font-family: 'Bevan', serif;
+    font-size: 3.0em;
+}
+h2 {
+    font-family: 'Cardo', serif;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+p { line-height: 1.4em; margin-bottom: 1.0em; }
+a { color: #821122; }
+#wrapper {
+    width: 925px;
+    margin: 30px auto 30px;
+}
+#filters {
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+}
+#filters a {
+    color: #000;
+    font-size: 12px;
+    padding: 5px;
+    background: #e2e2e2;
+    cursor: pointer;
+    margin-right: 3px;
+}
+#filters a:last-child {
+    margin-right: 0;
+}
+#filters a.SAS { background: #895881; color: #fff; }
+#filters a.ECS { background: #ED7C31; color: #fff; }
+#filters a.MEA { background: #82A5C0; color: #fff; }
+#filters a.SSF { background: #6E9E75; color: #fff; }
+#filters a.LCN { background: #00BBD6; color: #fff; }
+#filters a.EAS { background: #e25f82; color: #fff; }
+#filters a.NAC { background: #be1932; color: #fff; }
+
+#vis {
+    min-height: 550px;
+}
+#blurb {
+    height: 60px;
+    border-top: 1px solid #e2e2e2;
+    padding-top: 20px;
+}
+
+path {
+    stroke: #e2e2e2;
+    stroke-width: 0.9;
+	fill: none;
+}
+path.current, path.highlight.current {
+    stroke: #000;
+    stroke-width: 1.7;
+}
+.SAS.highlight { stroke: #895881; }
+.ECS.highlight { stroke: #ED7C31; }
+.MEA.highlight { stroke: #82A5C0; }
+.SSF.highlight { stroke: #6E9E75; }
+.LCN.highlight { stroke: #00BBD6; }
+.EAS.highlight { stroke: #e25f82; }
+.NAC.highlight { stroke: #be1932; }
+.highlight { stroke-width: 1px; } 
+
+line {
+    stroke: black;
+}
+
+text {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 11px;
+}
+.axis {
+    stroke-width: 0.8;
+    stroke: #000;
+}
+.xTicks, .yTicks {
+    stroke-width: 0.6;
+    stroke: #000;
+}
+
+
+#cite { font-size: 0.8em; text-align: right; margin-top:10px; padding-bottom: 20px; }
+#cite a { background: #e2e2e2; text-decoration: none; color: #821122; }
+</style>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="http://d3js.org/d3.v3.js"></script>
+<body>
+	<div id="wrapper">
+	<div id="title"><h1>D3 Homework for DataMining</h1></div>
+<div id="blurb">
+<div id="default-blurb"><h2>Expected number of Questions Before Gold</h2><p>By playing out with the normalize current performance and past performance parmaters we can model out how many questions we will allocated before gold.</p></div>
+<div id="blurb-content"></div>
+<div id="vis"></div>
+</div></div>
+<script src="complicated_line.js"></script>
+
+</body>

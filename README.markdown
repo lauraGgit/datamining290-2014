@@ -1,15 +1,24 @@
 # Data Mining 290
 
 ### Description
-Learn how to obtain, clean, visualize, understand, model, and
-predict the world around you using data. Grading will consist of homework
-(30%), a midterm (30%), and a project (40%).
+This is my personal repository of UC Berkeley School of Information Datamining (INFO 290) repository. The master branch now contains homework from all of the assignments.
+
+1. Why I took this class
+2. Twitter Scraper to obtain dataists
+3. Basic statistics in Python
+4. MapReduce using MrJobs
+5. Calculating a Gini index
+6. Backpropagation through Neural Networks
+7. Kmeans
+8. Representing Graphs
+9. D3 Example
+
+###
+Main Repository for the Class
+[Info 290T: Data Mining on Github](https://github.com/jretz/datamining290)
 
 ### Instructor
 Jimmy Retzlaff &lt;jretz@ischool&gt;
-
-### GSI
-Shreyas &lt;shreyas@ischool&gt;
 
 ### Textbook
 Han, J., Kamber, M., & Pei, J. (2011). _Data Mining: Concepts and Techniques_, Third Edition *(3rd ed.)*. Morgan Kaufmann.
