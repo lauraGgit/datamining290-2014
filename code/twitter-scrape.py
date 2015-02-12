@@ -13,8 +13,8 @@ consumer_secret = ""
 
 # The access tokens can be found on your applications's Details
 # page located at https://dev.twitter.com/apps (located under "Your access token")
-access_token="256479408-A8ZQB9hp8nKGLDvc6jb60ttfwfpj7PytlRskJegW"
-access_token_secret="nDijU9NBRB0uwa2vAVqHKgZlKpGm98IhYNPFb2h28hdbz"
+access_token="add key"
+access_token_secret="add token"
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth)
