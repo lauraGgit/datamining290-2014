@@ -7,8 +7,8 @@ import os
 import tweepy
 import csv, codecs, cStringIO
 
-consumer_key = "rLzFKsgNyV9MWszRxPzFYg"
-consumer_secret = "U1hIJ1uSGgzktjvEohXSgcfufP2E4YfEvqJ3XmHv1U"
+consumer_key = ""
+consumer_secret = ""
 
 
 # The access tokens can be found on your applications's Details
